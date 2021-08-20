@@ -15,4 +15,14 @@ public class DvEhrUriInvariantTest {
     public void invalid() {
         InvariantTestUtil.assertInvariantInvalid(new DvEHRURI("https://something/something"), "Scheme_valid", "/");
     }
+    
+    @Test
+    public void invalid2() {
+        InvariantTestUtil.assertInvariantInvalid(new DvEHRURI(""), "Scheme_valid", "/");
+    }
+
+    @Test
+    public void invalid3() {
+        InvariantTestUtil.assertInvariantInvalid(new DvEHRURI("target1"), "Scheme_valid", "/");
+    }
 }
